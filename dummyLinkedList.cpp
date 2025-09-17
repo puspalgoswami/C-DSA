@@ -1,13 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define the Node structure
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Create a new node
 struct Node* createNode(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -22,7 +20,6 @@ void insertAtFirst(struct Node** head, int data) {
     *head = newNode;
 }
 
-// Insert at end
 void insertAtEnd(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     if (*head == NULL) {
@@ -36,7 +33,6 @@ void insertAtEnd(struct Node** head, int data) {
     temp->next = newNode;
 }
 
-// Insert after a specific value
 void insertAfterValue(struct Node** head, int target, int data) {
     struct Node* temp = *head;
     while (temp != NULL && temp->data != target) {
@@ -147,4 +143,5 @@ int main() {
 
     return 0;
 }
+
 
