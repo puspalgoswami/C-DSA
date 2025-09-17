@@ -13,7 +13,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Insert at beginning
 void insertAtFirst(struct Node** head, int data) {
     struct Node* newNode = createNode(data);
     newNode->next = *head;
@@ -143,5 +142,6 @@ int main() {
 
     return 0;
 }
+
 
 
